@@ -1,10 +1,15 @@
+import Container from "@/components/Container";
+import ProductDetails from "@/components/product/ProductDetails";
+import { product } from "../../../../utils/product";
 interface IParams{
     productId?: string
 }
 
 const Product = ({params}: {params: IParams}) => {
     return ( 
-        <div>{params.productId}</div>
+        <Container>
+            <ProductDetails product={product} />
+        </Container>
      );
 }
  
